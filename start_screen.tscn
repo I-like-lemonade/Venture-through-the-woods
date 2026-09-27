@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bk8aipuqm5nep"]
+
+[ext_resource type="Script" uid="uid://draikwinusdi2" path="res://play.gd" id="1_ncxyx"]
+[ext_resource type="Script" uid="uid://bh4twe5j7ax5f" path="res://game_title.gd" id="2_pevhg"]
+[ext_resource type="Texture2D" uid="uid://b5epxdyan5u6f" path="res://bg start.png" id="3_afy8x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2m5a4"]
+font_size = 72
+font_color = Color(0.5294118, 1, 0.3882353, 1)
+outline_size = 10
+outline_color = Color(1, 1, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 1, 0.13725491, 0)
+
+[node name="StartScreen" type="Control" unique_id=1392744834]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ncxyx")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1411912221]
+layout_mode = 0
+offset_right = 1185.0
+offset_bottom = 676.0
+mouse_filter = 2
+texture = ExtResource("3_afy8x")
+expand_mode = 1
+
+[node name="GameTitle" type="Label" parent="." unique_id=1661653556]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 130.0
+offset_right = 1057.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(9.048581e-06, 0.908642, 0.68454933, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Venture through the woods"
+label_settings = SubResource("LabelSettings_2m5a4")
+script = ExtResource("2_pevhg")
+
+[node name="PlayButton" type="Button" parent="." unique_id=507059266]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 439.0
+offset_right = 768.0
+offset_bottom = 543.0
+text = "PLAY"

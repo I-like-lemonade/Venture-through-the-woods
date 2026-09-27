@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c71u3tnyawjjp"]
+
+[ext_resource type="Texture2D" uid="uid://b5epxdyan5u6f" path="res://bg start.png" id="1_l2arl"]
+[ext_resource type="Script" uid="uid://b6nvejp7ynavx" path="res://WinScreen.gd" id="1_wmwda"]
+
+[node name="WinScreen" type="Control" unique_id=451833440]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wmwda")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=802211273]
+layout_mode = 0
+offset_left = -680.0
+offset_top = -937.0
+offset_right = 2319.0
+offset_bottom = 744.0
+texture = ExtResource("1_l2arl")
+
+[node name="PlayAgain" type="Button" parent="." unique_id=1845732538]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 377.0
+offset_right = 738.0
+offset_bottom = 543.0
+theme_override_font_sizes/font_size = 54
+text = "PLAY AGAIN"
+
+[node name="Label" type="Label" parent="." unique_id=375263232]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 123.0
+offset_right = 921.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(1, 0.7490196, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "YOU WIN!!!"
+
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
